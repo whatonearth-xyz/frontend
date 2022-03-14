@@ -9,6 +9,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'ui';
 
+  randomNumber = Math.random();
+
   constructor(public http : HttpClient) {
     
   }
