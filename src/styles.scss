@@ -83,3 +83,15 @@ h6 {
     color: rgb(100, 180, 255);
     width: fit-content !important;
 }
+
+.markdown-container menu, ol {
+    list-style: decimal !important;
+    /* margin: 0; */
+    padding-left: 2.5em !important;
+}
+
+.markdown-container menu, ul {
+    list-style: disc !important;
+    /* margin: 0; */
+    padding-left: 2.5em !important;
+}
