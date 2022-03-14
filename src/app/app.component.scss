@@ -1,0 +1,11 @@
+.gradbg {
+    border-radius: 15px;
+}
+
+.translucent {
+    z-index: 1000; 
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
