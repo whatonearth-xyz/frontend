@@ -1,0 +1,58 @@
+<div class="container pb-lg-4">
+    <div class="row mt-4 mb-4">
+        <div class="col-12 mb-3">
+            <div class="mt-xl-5 font-thin text-xl xl:text-3xl">Search ✨ <a href="https://github.com/whatonearth-xyz/backend" class="text-sm text-blue-400 secondary-text">(view code)</a></div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-xl-6 xl:text-2xl">
+                <input [(ngModel)]="query" autofocus style="text-align: start;" class="graybg p-3" type="text" placeholder="Ex. What on earth is web3 🤔">
+            </div>
+            <div class="col-6 col-xl-2 xl:text-xl d-flex mt-3 mt-xl-0">
+                <button (click)="search()" class="bg-gradient-to-r from-teal-400 to-green-400 text-white font-thin p-3">
+                    <svg class="h-5 w-5 text-white d-inline mb-1"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="10" cy="10" r="7" />  <line x1="21" y1="21" x2="15" y2="15" /></svg>
+                    Search
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div *ngIf="!loading">
+    <div class="container">
+        <div class="markdown-container font-medium secondary-text text-gray-300 mb-2">
+            Showing results for query <span class="text-pink-500">`{{searched_query}}<span *ngIf="!searched_query">&lt;empty search&gt;</span>`</span>.
+            <br>
+            You are viewing the file <a href="https://github.com/whatonearth-xyz/search-results/blob/main/{{result}}" class="text-blue-500">{{result}}</a> 🎉  
+        </div>
+        <div class="row">
+            <div class="markdown-container font-medium secondary-text bg-gray-800 p-4 p-md-5 text-gray-300 rounded-xl">
+                Are you unhappy with the results? Feel free to contribute on our <a href="https://github.com/whatonearth-xyz" class="text-blue-500">Github</a> 🙃
+                <markdown src="https://raw.githubusercontent.com/whatonearth-xyz/search-results/main/{{result}}?v={{randomNumber}}"></markdown>
+            </div>
+        </div>
+    </div>
+    
+    <div class="text-center secondary-text mt-1 mb-5">
+        <svg class="h-4 w-4 text-white-500 d-inline mb-1 me-1"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M14 3v4a1 1 0 0 0 1 1h4" />  <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /></svg>
+        <span>{{result}}</span>
+    </div>
+    
+    <br>
+</div>
+
+<div *ngIf="loading">
+    <div class="container">
+        <div class="markdown-container font-medium secondary-text text-gray-300 mb-2">
+            Loading...
+        </div>
+        <img class="rounded-xl" src="/assets/loading.gif">
+    </div>
+</div>
+
+
+
+
+
+<div class="text-center mb-5 mt-5 secondary-text">gm@whatonearth.xyz</div>
+  

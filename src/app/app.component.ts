@@ -7,11 +7,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ui';
-
-  randomNumber = Math.random();
-
-  constructor(public http : HttpClient) {
-    
-  }
 }
