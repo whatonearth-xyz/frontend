@@ -31,10 +31,10 @@ export class SearchComponent implements OnInit {
 
   async search() {
     this.loading = true;
+    if(this.searched_query != this.query) window.history.pushState('search', 'whatonearth.xyz | Search 🎉', '/search?query='+this.query);
     this.searched_query = this.query;
     var res = await this.http.get("https://whatonearth.azurewebsites.net/get?query="+this.searched_query).toPromise() as any;
-    console.log(res);
-    this.result = JSON.parse(res)["intent"]["name"];
+    this.result = res["intent"]["name"];
     this.loading = false;
   }
 
