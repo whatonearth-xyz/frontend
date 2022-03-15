@@ -5,10 +5,10 @@
             </div>
         <div class="row pt-2">
             <div class="col-12 col-xl-6 offset-xl-2 xl:text-2xl">
-                <input autofocus class="graybg p-3" type="text" placeholder="Ex. What on earth is web3 🤔">
+                <input [(ngModel)]="query" (keydown.enter)="search()" autofocus class="graybg p-3" type="text" placeholder="Ex. What on earth is web3 🤔">
             </div>
             <div class="col-6 offset-3 offset-xl-0 col-xl-2 xl:text-xl d-flex mt-3 mt-xl-0">
-                <button class="bg-gradient-to-r from-teal-400 to-green-400 p-3 text-white font-thin">
+                <button (click)="search()" class="bg-gradient-to-r from-teal-400 to-green-400 p-3 text-white font-thin">
                     <svg class="h-5 w-5 text-white d-inline mb-1"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="10" cy="10" r="7" />  <line x1="21" y1="21" x2="15" y2="15" /></svg>
                     Search
                 </button>
@@ -47,7 +47,7 @@
             <div class="row d-flex align-items-center">
             <div class="col-12 col-xl-6 p-1 p-xl-3 text-center p-xl-4">
                 <div class="font-extrabold text-3xl xl:text-5xl"><span class="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-green-400 fit-content">Open-Source</span> & Free</div>
-                <div class="secondary-text mt-2">W🌎E is completely open source and free to use.</div>
+                <div class="secondary-text mt-2">whaton🌎 is completely open source and free to use.</div>
                 <div class="text-center mt-4">
                 <button class="bg-gradient-to-r from-teal-400 to-green-400 p-3 ps-5 pe-5 text-white font-thin fit-content">Contribute on Github</button>
                 </div>
@@ -71,7 +71,7 @@
             </div>
             <div class="col-12 col-xl-6 offset-xl-1 p-1 p-xl-3 text-center p-xl-4 order-1 order-xl-2">
             <div class="font-extrabold text-3xl xl:text-5xl"><span class="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-green-400 fit-content">Learn Web3</span> Daily</div>
-            <div class="secondary-text mt-2">Subscribe to W🌎E's #Web3 newsletter.</div>
+            <div class="secondary-text mt-2">Subscribe to whaton🌎's #Web3 newsletter.</div>
             <div class="row mt-4 d-flex align-items-center">
                 <div class="col-12 col-xl-8 xl:text-xl">
                 <input class="graybg p-2" type="text" placeholder="Your Email Address">
@@ -94,7 +94,7 @@
             <div class="row d-flex align-items-center">
             <div class="col-12 col-xl-6 p-1 p-xl-3 text-center p-xl-4">
                 <div class="font-extrabold text-3xl xl:text-5xl"><span class="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-green-400 fit-content">Unbiased</span> & Safe</div>
-                <div class="secondary-text mt-2">W🌎E is an unbiased platform, we let the users take decisions of their own.</div>
+                <div class="secondary-text mt-2">whaton🌎 is an unbiased platform, we let the users take decisions of their own.</div>
             </div>
             <div class="col-12 col-xl-4 offset-xl-1 d-flex justify-content-center mt-3 mt-xl-0">
                 <blockquote data-theme="dark" class="twitter-tweet"><p lang="en" dir="ltr">Looking for unbiased but educated takes on Web3.</p>&mdash; naklecha.eth (🛠️, 🌈) (@naklecha) <a href="https://twitter.com/naklecha/status/1502040754239447040?ref_src=twsrc%5Etfw">March 10, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

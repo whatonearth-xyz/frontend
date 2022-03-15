@@ -10,12 +10,17 @@ export class HomeComponent implements OnInit {
 
 
   randomNumber = Math.random();
+  query = '';
 
   constructor(public http : HttpClient) {
     
   }
 
   ngOnInit(): void {
+  }
+
+  search() {
+    window.location.href = "/search?query="+this.query;
   }
 
 }

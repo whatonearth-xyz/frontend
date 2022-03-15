@@ -5,7 +5,7 @@
         </div>
         <div class="row">
             <div class="col-12 col-xl-6 xl:text-2xl">
-                <input [(ngModel)]="query" autofocus style="text-align: start;" class="graybg p-3" type="text" placeholder="Ex. What on earth is web3 🤔">
+                <input [(ngModel)]="query" (keydown.enter)="search()" autofocus style="text-align: start;" class="graybg p-3" type="text" placeholder="Ex. What on earth is web3 🤔">
             </div>
             <div class="col-6 col-xl-2 xl:text-xl d-flex mt-3 mt-xl-0">
                 <button (click)="search()" class="bg-gradient-to-r from-teal-400 to-green-400 text-white font-thin p-3">
@@ -21,7 +21,7 @@
 <div *ngIf="!loading">
     <div class="container">
         <div class="markdown-container font-medium secondary-text text-gray-300 mb-2">
-            Showing results for query <span class="text-pink-500">`{{searched_query}}<span *ngIf="!searched_query">&lt;empty search&gt;</span>`</span>.
+            Showing results for query <span class="text-pink-500">`{{searched_query}}<span *ngIf="!searched_query">&lt;empty search&gt;</span>`</span>
             <br>
             You are viewing the file <a href="https://github.com/whatonearth-xyz/search-results/blob/main/{{result}}" class="text-blue-500">{{result}}</a> 🎉  
         </div>
